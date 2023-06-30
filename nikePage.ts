@@ -9,6 +9,9 @@ export class nikePage extends BasePage {
     addToBag: By=By.xpath('//button[@class="ncss-btn-primary-dark btn-lg add-to-cart-btn"]');
     bagItems: By=By.xpath('(//a[@title="Bag Items: 1"])[2]');
     checkOutBtn: By=By.xpath('(//button[@data-version="__VERSION_HERE__"])[3]');
+    jacketsAndVestFilter: By=By.xpath('(//a[@aria-label="Category for Jackets & Vests"])');
+    fleeceJacketBtn: By=By.xpath('(//a[text()="Fleece Jackets"])');
+    secondOptionBtn: By=By.xpath('(//div[@data-product-position="2"])')
     //2nd test selectors
     signInTab: By=By.xpath('(//span[@id="hf_title_signin_membership"])[1]');
     userNameInput: By=By.xpath('(//input[@type="text"])');
