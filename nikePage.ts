@@ -31,7 +31,18 @@ export class nikePage extends BasePage {
     lilacBtn: By=By.xpath('(//button[@aria-label="Lilac"])');
     //5th test selectors
     removeBtn: By=By.xpath('(//button[@aria-label="Remove"])');
-    
+    airMax1Btn: By=By.xpath('(//div[@data-product-position="6"])');
+    airMaxSize: By=By.xpath('(//label[@for="skuAndSize__29152894"])');
+    airJordan1Btn: By=By.xpath('(//a[@aria-label="Air Jordan 1"])[2]');
+    mensFilter: By=By.xpath('(//button[@aria-label="Filter for Men"])');
+    retro1Btn: By=By.xpath('(//div[@data-product-position="5"])');
+    retro1Size: By=By.xpath('(//label[@for="skuAndSize__29198004"])');
+    fleeceShorts: By=By.xpath('(//div[@data-product-position="2"])');
+    newAndFeaturedTab: By=By.xpath('(//a[@data-path="new featured"])');
+    womensTab: By=By.xpath('(//a[@data-path="women"])');
+    kidsTab: By=By.xpath ('(//a[@class="pre-desktop-menu-link headline-5 p3-lg pt4-sm d-sm-b no-outline"])[4]');
+    accessoriesTab: By=By.xpath ('(//a[@class="pre-desktop-menu-link headline-5 p3-lg pt4-sm d-sm-b no-outline"])[5]');
+    saleTab: By=By.xpath ('(//a[@class="pre-desktop-menu-link headline-5 p3-lg pt4-sm d-sm-b no-outline"])[6]');
 
 
 
@@ -43,4 +54,9 @@ export class nikePage extends BasePage {
             await this.click(elementBy)
         }
     }
+    async mouseOver(elementBy: By) {
+        const element = await this.getElement(elementBy);
+        //Creating object of an Actions class
+        const actions = this.driver.actions({bridge: true}); 
+        await actions.move({duration:1000,origin:element,x:0,y:0}).perform(); }
 }

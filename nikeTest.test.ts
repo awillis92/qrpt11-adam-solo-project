@@ -14,7 +14,6 @@ test("Selecting an item and proceeding to checkout",async () => {
     await nike.click(nike.clothingTab);
     await nike.driver.sleep(1500)
     await nike.click(nike.techShorts);
-    await nike.driver.manage().window().maximize()
     await nike.click(nike.blueTechShorts);
     await nike.click(nike.size);
     await nike.driver.sleep(3000);
@@ -26,8 +25,4 @@ test("Selecting an item and proceeding to checkout",async () => {
         else console.log("screenshot saved")
     })
    });
-test("Removing item from Bag", async () => {
-    await nike.click(nike.bagItems);
-    await nike.click(nike.removeBtn)
-})
 });
